@@ -1,0 +1,22 @@
+
+
+
+<div class="container text-center">
+  <h1>Live codes du Batch <%= @batch.number %></h1>
+  <div class="row">
+    <% @repositories.each do |repository| %>
+      <div class="col-md-4">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+          <div class="card-category">Popular</div>
+          <div class="card-description">
+            <h2><%= repository['name'] %></h2>
+            <p><%= format_date(repository['created_at']) %></p>
+          </div>
+          <img class="card-user" src="<%= repository['owner']['avatar_url'] %>">
+          <a class="card-link" href="<%= repository['html_url'] %>" ></a>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
