@@ -1,14 +1,16 @@
 
-
-
 <div class="container text-center">
   <h1>Live codes du Batch <%= @batch.number %></h1>
   <div class="row">
     <% @repositories.each do |repository| %>
       <div class="col-md-4">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-          <div class="card-category">Popular</div>
-          <div class="card-description">
+        <div class="card">
+          <div class="card-svg">
+            <%= repository['kitt_svg'] %>
+          </div>
+
+          <div class="card-category"><%= repository['kitt_title'] %></div>
+          <div class="card-description text-left">
             <h2><%= repository['name'] %></h2>
             <p><%= format_date(repository['created_at']) %></p>
           </div>

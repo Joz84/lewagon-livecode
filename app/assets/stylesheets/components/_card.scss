@@ -1,10 +1,21 @@
 .card {
   height: 175px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
-  background-size: cover !important;
-  background-position: center;
+  background-color: #C3413B;
   color: white;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-svg {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: solid 5px black;
+  color: red;
+  background: white;
+  padding: 20px;
 }
 .card-user {
   position: absolute;
